@@ -59,5 +59,5 @@ export const downloadFile = (hash) => {
 };
 
 export const getDownLink = (hash) => { 
-  return `${API_BASE.replace('/api')}/download/${hash}`;
+  return `${API_BASE.replace('/api','')}/download/${hash}`;
 }
