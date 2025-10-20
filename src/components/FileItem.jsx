@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Download, Edit, Trash2, Copy, Check } from 'lucide-react';
+import { getDownnLink } from '../utils/api';
 
 const FileItem = ({ file, onRename, onDelete, onEdit, onDownload }) => {
   const [isRenaming, setIsRenaming] = useState(false);
@@ -14,7 +15,7 @@ const FileItem = ({ file, onRename, onDelete, onEdit, onDownload }) => {
   };
 
   const copyDownloadLink = () => {
-    const link = `${window.location.origin}/download/${file.hash}`;
+    const link = getDownLink(file.hash);
     navigator.clipboard.writeText(link);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
