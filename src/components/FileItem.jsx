@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Download, Edit, Trash2, Copy, Check } from 'lucide-react';
-import { getDownnLink } from '../utils/api';
+import { getDownLink } from '../utils/api';
 
 const FileItem = ({ file, onRename, onDelete, onEdit, onDownload }) => {
   const [isRenaming, setIsRenaming] = useState(false);
