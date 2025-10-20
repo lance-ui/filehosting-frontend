@@ -58,4 +58,6 @@ export const downloadFile = (hash) => {
   window.open(`${API_BASE.replace('/api', '')}/download/${hash}`, '_blank');
 };
 
-export const getDownlink = hash => return `${API_BASE.replace('/api')}/download/${hash}`;
+export const getDownlink = (hash) => { 
+  return `${API_BASE.replace('/api')}/download/${hash}`;
+}
