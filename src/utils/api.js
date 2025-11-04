@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = 'https://whole-hermione-lance-ui-0c243c4c.koyeb.app/api';
+const API_BASE = process.env.DEPLOYED_CDN_URL || '';
 
 export const uploadFile = async (file, token) => {
   const formData = new FormData();
