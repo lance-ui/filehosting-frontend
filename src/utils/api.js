@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = process.env.DEPLOYED_CDN_URL || '';
+const API_BASE = process.env.DEPLOYED_CDN_URL || 'the deployedn url for filehosting-backend without the last forwad slash /';
 
 export const uploadFile = async (file, token) => {
   const formData = new FormData();
